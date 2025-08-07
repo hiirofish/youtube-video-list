@@ -1,3 +1,14 @@
+承知いたしました。確かに、チャンネルIDの取得方法は少し分かりにくい場合がありますね。
+
+利用者が迷わないように、`README.md` の「チャンネルIDの設定」セクションに、IDの確認方法を追記します。以前の `README.md` に追記した修正版を以下に作成しました。
+
+-----
+
+### 修正版 `README.md`
+
+`<h4>4. チャンネルIDの設定` の部分に、「チャンネルIDの確認方法」という項目を追加しました。
+
+````markdown
 # YouTube Channel Video Exporter
 
 このツールは、指定したYouTubeチャンネルの全動画に関する詳細な情報を取得し、CSVファイルとしてエクスポートするPythonスクリプトです。
@@ -45,6 +56,28 @@ pip install -r requirements.txt
 UCaQuget_3CnCCTYJEo8tttA
 ```
 
+---
+##### **チャンネルIDの確認方法**
+
+**方法1：チャンネルのURLから確認する（最も簡単な方法）**
+1.  ブラウザで目的のYouTubeチャンネルのトップページにアクセスします。
+2.  アドレスバーのURLを確認します。
+3.  URLが `https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx` のような形式の場合、`/channel/` の後にある `UC` から始まる文字列がチャンネルIDです。
+
+**方法2：ご自身のチャンネルIDを確認する場合**
+1.  [YouTube Studio](https://studio.youtube.com/) にログインします。
+2.  左側のメニューから「カスタマイズ」を選択します。
+3.  「基本情報」タブをクリックします。
+4.  「チャンネルID」の項目に表示されているIDをコピーします。
+
+**方法3：カスタムURLが設定されているチャンネルの場合**
+チャンネルURLが `https://www.youtube.com/@Username` のようになっている場合、以下の手順で確認できます。
+1.  チャンネルのトップページで、ページの何もないところを右クリックし、「ページのソースを表示」（またはそれに類する項目）を選択します。
+2.  表示されたソースコード内で、`Ctrl + F` (Macの場合は `Cmd + F`) を押して検索ウィンドウを開き、`"channelId"` と入力して検索します。
+3.  見つかった `"channelId":"UCxxxxxxxxxxxxxxxxxxxxxx"` の、`UC`から始まる部分が本当のチャンネルIDです。
+
+---
+
 ## 実行方法
 
 セットアップが完了したら、ターミナルで以下のコマンドを実行します。
@@ -64,3 +97,4 @@ python youtube_video_list.py
 ## ライセンス
 
 This project is licensed under the MIT License.
+````
