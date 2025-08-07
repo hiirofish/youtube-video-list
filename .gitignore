@@ -1,0 +1,19 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# OAuth secrets
+client.json
+token.json
+
+# Local config file
+channel_id.txt
+
+# Output file
+*.csv
+
+# IDE settings
+.vscode/
+.idea/
+
+*.Identifier
